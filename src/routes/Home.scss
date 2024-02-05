@@ -1,14 +1,9 @@
 .home {
   &__intro {
-    font-size: 32px;
+    color: #cccccc;
     font-weight: 400;
-    @media (min-width: 1024px) {
-      font-size: 48px;
-    }
-
     strong {
       color: #af4623;
-      font-weight: 700;
     }
   }
 

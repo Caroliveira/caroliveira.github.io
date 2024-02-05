@@ -36,6 +36,15 @@ main {
   }
 }
 
+h1 {
+  color: #af4623;
+  font-size: 32px;
+  font-weight: 700;
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+}
+
 a {
   color: #cccccc;
   &:hover {
@@ -57,6 +66,7 @@ ol,
 ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 footer {

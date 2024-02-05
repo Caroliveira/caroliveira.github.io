@@ -1,0 +1,233 @@
+.candles {
+  align-items: center;
+  animation: bg 10s linear infinite;
+  border-radius: 8px;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  max-width: 400px;
+  width: 90%;
+
+  &__wick {
+    background-color: gray;
+    height: 15px;
+    margin-top: -6px;
+    position: relative;
+    width: 2px;
+    z-index: 2;
+  }
+
+  &__top {
+    background-color: #fffaed;
+    border-radius: 100%;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-bottom: -10px;
+    position: relative;
+    width: 100px;
+    z-index: 2;
+  }
+
+  &__bottom {
+    background-image: linear-gradient(to right, #fffaed, #e6ddca);
+    border-radius: 100%;
+    height: 20px;
+    margin-top: -10px;
+    position: relative;
+    width: 100px;
+    z-index: 0;
+  }
+
+  &__first {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -80px;
+
+    &__body {
+      background-color: beige;
+      background-image: linear-gradient(to right, #fffaed, #e6ddca);
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      position: relative;
+      width: 100px;
+      z-index: 1;
+
+      .candles__eyes {
+        animation: eyes 10s infinite linear;
+      }
+    }
+  }
+
+  &__fire {
+    animation: fire 10s linear infinite;
+    border-radius: 100%;
+    height: 15px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__second {
+    margin-left: 50px;
+
+    &__body {
+      align-items: center;
+      background-color: beige;
+      background-image: linear-gradient(to right, #fffaed, #e6ddca);
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      position: relative;
+      width: 100px;
+      z-index: 1;
+
+      .candles__eye {
+        animation: blink 10s infinite linear;
+      }
+    }
+  }
+
+  &__head {
+    margin-top: 40px;
+  }
+
+  &__eyes {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__eye {
+    background-color: black;
+    border-radius: 50% 50% 0 0;
+    height: 10px;
+    margin: 0 10px 20px 0;
+    width: 10px;
+  }
+
+  &__mouth {
+    animation: mouth 10s infinite linear;
+    background-color: black;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__shadow {
+    box-shadow: 0 0 30px 3px black;
+    margin-top: 200px;
+    position: absolute;
+    width: 320px;
+    z-index: -1;
+  }
+}
+
+@keyframes bg {
+  0%,
+  19% {
+    background-color: #ad4022;
+  }
+  20%,
+  49% {
+    background-color: black;
+  }
+  55%,
+  100% {
+    background-color: #ad4022;
+  }
+}
+
+@keyframes eyes {
+  0%,
+  19% {
+    margin-right: 0px;
+  }
+  20%,
+  35% {
+    margin-right: 0px;
+  }
+  40% {
+    margin-right: 10px;
+  }
+  45% {
+    margin-right: -10px;
+  }
+  49%,
+  100% {
+    margin-right: 0px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  80% {
+    border-radius: 50% 50% 0 0;
+    height: 10px;
+    margin-top: 0px;
+  }
+  82% {
+    border-radius: none;
+    height: 2px;
+    margin-top: 8px;
+  }
+  84% {
+    border-radius: 50% 50% 0 0;
+    height: 10px;
+    margin-top: 0px;
+  }
+  86% {
+    border-radius: none;
+    height: 2px;
+    margin-top: 8px;
+  }
+  88%,
+  100% {
+    border-radius: 50% 50% 0 0;
+    height: 10px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes fire {
+  0%,
+  19% {
+    background-color: orange;
+    width: 10px;
+  }
+  20%,
+  49% {
+    background-color: transparent;
+    width: 10px;
+  }
+  50% {
+    background-color: yellow;
+    width: 8px;
+  }
+  100% {
+    background-color: orange;
+    width: 10px;
+  }
+}
+
+@keyframes mouth {
+  0% {
+    height: 2px;
+    width: 10px;
+  }
+  17% {
+    border-radius: 100%;
+    height: 20px;
+    width: 15px;
+  }
+  20%,
+  25% {
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+  }
+  30%,
+  100% {
+    height: 2px;
+    width: 10px;
+  }
+}
