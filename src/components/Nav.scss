@@ -3,13 +3,27 @@
   padding: 16px;
   width: 100%;
 
+  &__current:after {
+    width: 12px;
+    height: 4px;
+    background-color: #ad4022;
+    border-radius: 8px;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+  }
+
   ul {
     align-items: center;
     display: flex;
     gap: 24px;
+    li {
+      position: relative;
 
-    a {
-      text-decoration: none;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
