@@ -3,14 +3,14 @@
     color: #cccccc;
     font-weight: 400;
     strong {
-      color: #af4623;
+      color: #ad4022;
     }
   }
 
   &__illustration {
     background-color: #343434;
     border-radius: 8px;
-    border: 2px solid #af4623;
+    border: 2px solid #ad4022;
     max-width: 90%;
     @media (min-width: 1024px) {
       max-width: 50%;
@@ -28,8 +28,8 @@
     }
 
     button {
-      background-color: #af4623;
-      border: 1px solid #af4623;
+      background-color: #ad4022;
+      border: 1px solid #ad4022;
       font-size: 20px;
       &:first-child {
         background-color: #343434;
