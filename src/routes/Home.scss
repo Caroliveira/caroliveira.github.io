@@ -1,0 +1,24 @@
+.home {
+  &__intro {
+    font-size: 32px;
+    font-weight: 400;
+    @media (min-width: 1024px) {
+      font-size: 48px;
+    }
+
+    strong {
+      color: #cc5931;
+      font-weight: 700;
+    }
+  }
+
+  &__illustration {
+    background-color: #343434;
+    border-radius: 8px;
+    border: 2px solid #cc5931;
+    max-width: 90%;
+    @media (min-width: 1024px) {
+      max-width: 50%;
+    }
+  }
+}
