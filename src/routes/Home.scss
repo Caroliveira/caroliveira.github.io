@@ -7,7 +7,7 @@
     }
 
     strong {
-      color: #cc5931;
+      color: #af4623;
       font-weight: 700;
     }
   }
@@ -15,10 +15,30 @@
   &__illustration {
     background-color: #343434;
     border-radius: 8px;
-    border: 2px solid #cc5931;
+    border: 2px solid #af4623;
     max-width: 90%;
     @media (min-width: 1024px) {
       max-width: 50%;
+    }
+  }
+
+  &__buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+    button {
+      background-color: #af4623;
+      border: 1px solid #af4623;
+      font-size: 20px;
+      &:first-child {
+        background-color: #343434;
+      }
     }
   }
 }

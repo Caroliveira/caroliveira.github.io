@@ -6,7 +6,7 @@ const Contact = () => {
     <main className="contact">
       <img alt="Picture of Lina." className="contact__picture" src={picture} />
       <div className="contact__content">
-        <h2 className="contact__title">Connect with me</h2>
+        <h1 className="contact__title">Connect with me</h1>
         <ul>
           <li>
             on{" "}

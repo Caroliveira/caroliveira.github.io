@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "./Nav.scss";
 import logo from "/logo.png";
+import "./Nav.scss";
 
 const Nav = () => {
   return (
@@ -10,6 +10,9 @@ const Nav = () => {
           <Link to="/">
             <img alt="Home" src={logo} />
           </Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

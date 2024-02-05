@@ -36,17 +36,27 @@ main {
   }
 }
 
+a {
+  color: #cccccc;
+  &:hover {
+    color: #af4623;
+  }
+}
+
+button {
+  background-color: #343434;
+  border-radius: 50px;
+  border: none;
+  color: #cccccc;
+  cursor: pointer;
+  padding: 8px 16px;
+  width: fit-content;
+}
+
 ol,
 ul {
   list-style: none;
   margin: 0;
-}
-
-a {
-  color: #cccccc;
-  &:hover {
-    color: #cc5931;
-  }
 }
 
 footer {
