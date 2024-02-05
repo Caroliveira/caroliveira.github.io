@@ -1,0 +1,37 @@
+.contact {
+  flex-direction: column-reverse;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  &__picture {
+    background-color: #343434;
+    border-radius: 8px;
+    box-shadow: -20px 20px #cc5931;
+    margin: 24px 0 24px 24px;
+    max-width: 80%;
+    @media (min-width: 1024px) {
+      margin: 0;
+      max-width: 30%;
+    }
+  }
+
+  &__content {
+    li {
+      font-size: 20px;
+      text-align: start;
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__title {
+    color: #cc5931;
+    font-size: 32px;
+    font-weight: 700;
+    @media (min-width: 1024px) {
+      font-size: 48px;
+    }
+  }
+}

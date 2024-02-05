@@ -11,6 +11,9 @@ const Nav = () => {
             <img alt="Home" src={logo} />
           </Link>
         </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
     </nav>
   );

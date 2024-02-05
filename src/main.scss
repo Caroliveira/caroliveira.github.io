@@ -21,10 +21,32 @@ body {
   margin: 0;
 }
 
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 48px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  text-align: center;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
 ol,
 ul {
   list-style: none;
   margin: 0;
+}
+
+a {
+  color: #cccccc;
+  &:hover {
+    color: #cc5931;
+  }
 }
 
 footer {
