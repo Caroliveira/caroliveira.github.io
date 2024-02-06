@@ -9,7 +9,15 @@ const Developments = () => {
     const isCurrent = index === current;
     const titleClassName = `development__title${isCurrent ? "--current" : ""}`;
     return (
-      <li key={type} className="development" onClick={() => setCurrent(index)}>
+      <li
+        key={type}
+        tabIndex="0"
+        role="button"
+        className="development"
+        onClick={() => setCurrent(index)}
+        aria-label={`Display ${type}`}
+        aria-expanded={isCurrent}
+      >
         <h2 className={titleClassName}>{type}</h2>
         {isCurrent && <p className="development__description">{description}</p>}
       </li>

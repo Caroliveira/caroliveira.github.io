@@ -3,12 +3,12 @@
 .achvCard {
   align-items: center;
   border-radius: 8px;
+  cursor: pointer;
   display: flex;
   height: 300px;
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  cursor: pointer;
 
   &__image {
     height: 100%;
