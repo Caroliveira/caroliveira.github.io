@@ -1,21 +1,26 @@
-import Candles from "../components/Candles";
+import { useState } from "react";
+import { PROJECTS } from "../utils/constants";
 import "./Projects.scss";
 
 const Projects = () => {
+  const [current, setCurrent] = useState(2);
+
+  const renderListItem = ({ type, description }, index) => {
+    const isCurrent = index === current;
+    const titleClassName = `project__title${isCurrent ? "--current" : ""}`;
+    return (
+      <li key={type} className="project" onClick={() => setCurrent(index)}>
+        <h2 className={titleClassName}>{type}</h2>
+        {isCurrent && <p className="project__description">{description}</p>}
+      </li>
+    );
+  };
+
   return (
-    <main className="projects">
-      <h1>Experiments</h1>
-      <Candles />
-      <p>
-        See the Pen{" "}
-        <a href="https://codepen.io/caroliveira/pen/rNOmOjb">
-          Pure CSS Candles
-        </a>{" "}
-        by Caroliveira (
-        <a href="https://codepen.io/caroliveira">@caroliveira</a>) on{" "}
-        <a href="https://codepen.io">CodePen</a>.
-      </p>
-    </main>
+    <div className="projects">
+      <ul className="projects__list">{PROJECTS.map(renderListItem)}</ul>
+      <div className="projects__content">{PROJECTS[current].content}</div>
+    </div>
   );
 };
 

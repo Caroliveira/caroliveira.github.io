@@ -1,12 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
+import { ROUTES } from "../utils/constants";
 import logo from "/logo.png";
 import "./Nav.scss";
-
-const ROUTES = [
-  { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" },
-];
 
 const Nav = () => {
   const location = useLocation();

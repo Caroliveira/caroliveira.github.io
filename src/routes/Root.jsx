@@ -9,11 +9,13 @@ const Root = () => {
   return (
     <div className="root">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <footer>&copy; {new Date().getFullYear()} Lina Oliveira</footer>
     </div>
   );

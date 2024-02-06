@@ -3,7 +3,7 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <main className="contact">
+    <div className="contact">
       <img alt="Picture of Lina." className="contact__picture" src={picture} />
       <div className="contact__content">
         <h1 className="contact__title">Connect with me</h1>
@@ -52,7 +52,7 @@ const Contact = () => {
           </li>
         </ul>
       </div>
-    </main>
+    </div>
   );
 };
 

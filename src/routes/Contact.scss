@@ -1,5 +1,9 @@
 .contact {
+  align-items: center;
+  display: flex;
   flex-direction: column-reverse;
+  gap: 48px;
+  justify-content: center;
   @media (min-width: 1024px) {
     flex-direction: row;
   }

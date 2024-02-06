@@ -31,6 +31,7 @@ main {
   margin: 0 auto;
   max-width: 1280px;
   text-align: center;
+  width: 100%;
   @media (min-width: 1024px) {
     flex-direction: row;
   }
@@ -43,6 +44,11 @@ h1 {
   @media (min-width: 1024px) {
     font-size: 48px;
   }
+}
+
+h2,
+p {
+  margin: 0;
 }
 
 a {

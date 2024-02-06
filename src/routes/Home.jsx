@@ -5,7 +5,7 @@ import "./Home.scss";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <main>
+    <>
       <div>
         <h1 className="home__intro">
           Hey there! <br />
@@ -22,7 +22,7 @@ const Home = () => {
         src={illustration}
         className="home__illustration"
       />
-    </main>
+    </>
   );
 };
 
