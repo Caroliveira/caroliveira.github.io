@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import illustration from "/src/assets/lina-illustration.png";
+import illustration from "/src/assets/images/lina-illustration.png";
 import "./Home.scss";
 
 const Home = () => {

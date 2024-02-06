@@ -1,12 +1,14 @@
+@import "../assets/styles/variables";
+
 .nav {
-  background-color: #343434;
+  background-color: $SECONDARY_BACKGROUND_COLOR;
   padding: 16px;
   width: 100%;
 
   &__current:after {
     width: 12px;
     height: 4px;
-    background-color: #ad4022;
+    background-color: $PRIMARY_COLOR;
     border-radius: 8px;
     content: "";
     position: absolute;

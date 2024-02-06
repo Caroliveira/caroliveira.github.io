@@ -1,16 +1,18 @@
+@import "../assets/styles/variables";
+
 .home {
   &__intro {
-    color: #cccccc;
+    color: $PRIMARY_TEXT_COLOR;
     font-weight: 400;
     strong {
-      color: #ad4022;
+      color: $PRIMARY_COLOR;
     }
   }
 
   &__illustration {
-    background-color: #343434;
+    background-color: $SECONDARY_BACKGROUND_COLOR;
     border-radius: 8px;
-    border: 2px solid #ad4022;
+    border: 2px solid $PRIMARY_COLOR;
     max-width: 90%;
     @media (min-width: 1024px) {
       max-width: 50%;
@@ -28,11 +30,11 @@
     }
 
     button {
-      background-color: #ad4022;
-      border: 1px solid #ad4022;
+      background-color: $PRIMARY_COLOR;
+      border: 1px solid $PRIMARY_COLOR;
       font-size: 20px;
       &:first-child {
-        background-color: #343434;
+        background-color: $SECONDARY_BACKGROUND_COLOR;
       }
     }
   }

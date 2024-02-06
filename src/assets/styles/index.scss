@@ -1,11 +1,13 @@
+@import "variables";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #cccccc;
-  background-color: #242424;
+  color: $PRIMARY_TEXT_COLOR;
+  background-color: $PRIMARY_BACKGROUND_COLOR;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +40,7 @@ main {
 }
 
 h1 {
-  color: #ad4022;
+  color: $PRIMARY_COLOR;
   font-size: 32px;
   font-weight: 700;
   @media (min-width: 1024px) {
@@ -52,17 +54,17 @@ p {
 }
 
 a {
-  color: #cccccc;
+  color: $PRIMARY_TEXT_COLOR;
   &:hover {
-    color: #ad4022;
+    color: $PRIMARY_COLOR;
   }
 }
 
 button {
-  background-color: #343434;
+  background-color: $SECONDARY_BACKGROUND_COLOR;
   border-radius: 50px;
   border: none;
-  color: #cccccc;
+  color: $PRIMARY_TEXT_COLOR;
   cursor: pointer;
   padding: 8px 16px;
   width: fit-content;

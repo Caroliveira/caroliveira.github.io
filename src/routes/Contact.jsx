@@ -1,4 +1,4 @@
-import picture from "/src/assets/lina-picture.jpg";
+import picture from "/src/assets/images/lina-picture.jpg";
 import "./Contact.scss";
 
 const Contact = () => {

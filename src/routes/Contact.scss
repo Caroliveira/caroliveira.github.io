@@ -1,3 +1,5 @@
+@import "../assets/styles/variables";
+
 .contact {
   align-items: center;
   display: flex;
@@ -9,9 +11,9 @@
   }
 
   &__picture {
-    background-color: #343434;
+    background-color: $SECONDARY_BACKGROUND_COLOR;
     border-radius: 8px;
-    box-shadow: -20px 20px #ad4022;
+    box-shadow: -20px 20px $PRIMARY_COLOR;
     margin: 24px 0 24px 24px;
     max-width: 80%;
     @media (min-width: 1024px) {
