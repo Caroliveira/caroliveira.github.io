@@ -1,19 +1,18 @@
 import Candles from "./Candles";
+import "./Experiments.scss";
 
 const Experiments = () => {
   return (
-    <>
+    <div className="experiments">
       <Candles />
       <p>
-        See the Pen{" "}
+        See{" "}
         <a href="https://codepen.io/caroliveira/pen/rNOmOjb">
           Pure CSS Candles
         </a>{" "}
-        by Caroliveira (
-        <a href="https://codepen.io/caroliveira">@caroliveira</a>) on{" "}
-        <a href="https://codepen.io">CodePen</a>.
+        on <a href="https://codepen.io">CodePen</a>.
       </p>
-    </>
+    </div>
   );
 };
 

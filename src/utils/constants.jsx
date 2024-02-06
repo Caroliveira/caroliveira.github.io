@@ -1,4 +1,6 @@
 import Experiments from "../components/Experiments";
+import Projects from "../components/Projects";
+import Achievements from "../components/Achievements";
 
 export const ROUTES = [
   { name: "Home", path: "/" },
@@ -11,8 +13,7 @@ export const DEVELOPMENTS = [
     type: "Projects",
     description:
       "Some personal projects I worked on my own to improve my skills, showcase my work or just to take an idea of the paper",
-    content:
-      "Sorry, I don't have projects to show yet... Feel free to take a look on my experiments or at my work =Dorry, I don't have projects to show yet... Feel free to take a look on my experiments or at my work =D",
+    content: <Projects />,
   },
   {
     type: "Experiments",
@@ -21,9 +22,9 @@ export const DEVELOPMENTS = [
     content: <Experiments />,
   },
   {
-    type: "Work",
+    type: "Achievements",
     description:
-      "Quick overview over my work and achievements, something for you to know a bit more of my tragetory",
-    content: "Test",
+      "Check out my highlights to see how I've grown and stayed dedicated to doing great work.",
+    content: <Achievements />,
   },
 ];
