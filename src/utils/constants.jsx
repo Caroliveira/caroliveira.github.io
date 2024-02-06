@@ -2,11 +2,11 @@ import Experiments from "../components/Experiments";
 
 export const ROUTES = [
   { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
+  { name: "Developments", path: "/developments" },
   { name: "Contact", path: "/contact" },
 ];
 
-export const PROJECTS = [
+export const DEVELOPMENTS = [
   {
     type: "Projects",
     description:

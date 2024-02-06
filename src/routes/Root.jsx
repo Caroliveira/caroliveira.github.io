@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Nav from "../components/Nav";
 import Home from "./Home";
 import Contact from "./Contact";
-import Projects from "./Projects";
+import Developments from "./Developments";
 import "./Root.scss";
 
 const Root = () => {
@@ -12,7 +12,7 @@ const Root = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/developments" element={<Developments />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
