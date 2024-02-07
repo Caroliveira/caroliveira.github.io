@@ -27,7 +27,7 @@ Here are the basic steps to get it up and running:
    ```bash
    npm run dev
    ```
-   Access the portfolio at http://localhost:5173 or just [click here](https://caroliveira.github.io/) and explore!
+   Access the portfolio at http://localhost:5173 or forget all that, just [click here](https://caroliveira.github.io/) and explore!
 
 ## Features
 
