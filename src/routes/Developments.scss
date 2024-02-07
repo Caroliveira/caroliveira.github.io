@@ -52,6 +52,10 @@
   position: relative;
   text-align: start;
 
+  &:hover {
+    box-shadow: none;
+  }
+
   &::before {
     background-color: $SECONDARY_TEXT_COLOR;
     border-radius: 8px;
