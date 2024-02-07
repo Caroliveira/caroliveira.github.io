@@ -7,19 +7,20 @@ const Developments = () => {
 
   const renderListItem = ({ type, description }, index) => {
     const isCurrent = index === current;
-    const itemClassName = `development${isCurrent ? "--current" : ""}`;
+    const buttonClassName = `development${isCurrent ? "--current" : ""}`;
     return (
-      <li
-        key={type}
-        tabIndex="0"
-        role="button"
-        className={itemClassName}
-        onClick={() => setCurrent(index)}
-        aria-label={`Display ${type}`}
-        aria-expanded={isCurrent}
-      >
-        <h2 className="development__title">{type}</h2>
-        {isCurrent && <p className="development__description">{description}</p>}
+      <li key={type}>
+        <button
+          className={buttonClassName}
+          onClick={() => setCurrent(index)}
+          aria-label={`Display ${type}`}
+          aria-expanded={isCurrent}
+        >
+          <h2 className="development__title">{type}</h2>
+          {isCurrent && (
+            <p className="development__description">{description}</p>
+          )}
+        </button>
       </li>
     );
   };

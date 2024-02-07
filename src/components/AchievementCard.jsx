@@ -6,13 +6,15 @@ const AchievementCard = ({ title, description, img, imgAlt }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <div
-      tabIndex="0"
+    <button
       className="achvCard"
       onClick={() => setShowDetails(!showDetails)}
-      aria-label="Show achievement details"
       aria-expanded={showDetails}
-      role="button"
+      aria-label={
+        showDetails
+          ? `Collapse details for ${title}`
+          : `Expand details for ${title}`
+      }
     >
       {showDetails ? (
         <div className="achvCard__details">
@@ -22,7 +24,7 @@ const AchievementCard = ({ title, description, img, imgAlt }) => {
       ) : (
         <img src={img} alt={imgAlt} className="achvCard__image" />
       )}
-    </div>
+    </button>
   );
 };
 

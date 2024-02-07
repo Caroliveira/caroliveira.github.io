@@ -13,7 +13,9 @@ const Home = () => {
           Front end Developer
         </h1>
         <div className="home__buttons">
-          <button>Learn more about me</button>
+          <button onClick={() => navigate("/developments")}>
+            Learn more about me
+          </button>
           <button onClick={() => navigate("/contact")}>Get in touch</button>
         </div>
       </div>
