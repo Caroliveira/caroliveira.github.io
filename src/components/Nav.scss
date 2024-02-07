@@ -66,19 +66,21 @@
     flex-direction: column;
     gap: 24px;
     left: 0;
-    padding-bottom: 16px;
     position: absolute;
     top: 56px;
     width: 100%;
-
     @media (min-width: 1024px) {
       box-shadow: none;
       flex-direction: row;
       padding-bottom: 0;
       position: static;
     }
+
     li {
       position: relative;
+      &:last-child {
+        padding-bottom: 16px;
+      }
       a {
         text-decoration: none;
       }

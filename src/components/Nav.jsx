@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import useHandleOutsideClick from "../hooks/useHandleOutsideClick";
 import { ROUTES } from "../utils/constants";
 import logo from "/logo.png";
 import "./Nav.scss";
@@ -11,23 +12,11 @@ const Nav = () => {
   const [openNav, setOpenNav] = useState(!isCollapsibleNav);
   const navRef = useRef();
 
+  useHandleOutsideClick(navRef, isCollapsibleNav && openNav, setOpenNav);
+
   useEffect(() => {
     isCollapsibleNav && setOpenNav(false);
   }, [isCollapsibleNav, location.pathname]);
-
-  useEffect(() => {
-    const handleOutsideClick = ({ target }) => {
-      const current = navRef.current;
-      if (current && !current.contains(target) && isCollapsibleNav && openNav) {
-        setOpenNav(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isCollapsibleNav, openNav]);
 
   const handleLogoClick = () => {
     isCollapsibleNav ? setOpenNav(!openNav) : navigate("/");
@@ -48,8 +37,13 @@ const Nav = () => {
       <Link to="/" className="nav__logo">
         <img alt="Go to home page" src={logo} />
       </Link>
-      {openNav && <ul>{ROUTES.map(renderNavLink)}</ul>}
-      <button onClick={handleLogoClick} className="nav__menu">
+      <ul id="navigation">{openNav && ROUTES.map(renderNavLink)}</ul>
+      <button
+        onClick={handleLogoClick}
+        className="nav__menu"
+        aria-expanded={openNav}
+        aria-controls="navigation"
+      >
         {openNav ? "Close" : "Open"} menu
       </button>
     </nav>
