@@ -15,7 +15,7 @@ const Nav = () => {
   useHandleOutsideClick(navRef, isCollapsibleNav && openNav, setOpenNav);
 
   useEffect(() => {
-    isCollapsibleNav && setOpenNav(false);
+    if (isCollapsibleNav) setOpenNav(false);
   }, [isCollapsibleNav, location.pathname]);
 
   const handleLogoClick = () => {
@@ -24,7 +24,7 @@ const Nav = () => {
 
   const renderNavLink = ({ name, path }) => {
     const isCurrent = path === location.pathname;
-    const navLiClassName = isCurrent ? "nav__current" : "";
+    const navLiClassName = `nav__list__item${isCurrent ? "--current" : ""}`;
     return (
       <li key={name} className={navLiClassName}>
         <Link to={path}>{name}</Link>
@@ -35,17 +35,22 @@ const Nav = () => {
   return (
     <nav className="nav" ref={navRef}>
       <Link to="/" className="nav__logo">
-        <img alt="Go to home page" src={logo} />
+        <img alt="Lina Logo" src={logo} />
       </Link>
-      <ul id="navigation">{openNav && ROUTES.map(renderNavLink)}</ul>
       <button
-        onClick={handleLogoClick}
         className="nav__menu"
+        onClick={handleLogoClick}
         aria-expanded={openNav}
         aria-controls="navigation"
+        aria-label={`${openNav ? "Close" : "Open"} menu`}
       >
-        {openNav ? "Close" : "Open"} menu
+        <div className={`nav__menu${openNav ? "--close" : "--open"}`} />
       </button>
+      {openNav && (
+        <ul id="navigation" aria-label="Main navigation" className="nav__list">
+          {ROUTES.map(renderNavLink)}
+        </ul>
+      )}
     </nav>
   );
 };

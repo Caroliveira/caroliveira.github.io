@@ -1,10 +1,21 @@
 @import "../assets/styles/variables";
 
-%menu {
+%menu-open {
   background-color: $PRIMARY_COLOR;
-  border-radius: 50px;
+  content: "";
   height: 2px;
+  left: 0;
+  position: absolute;
   width: 20px;
+}
+
+%menu-close {
+  background-color: $PRIMARY_COLOR;
+  content: "";
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  width: 2px;
 }
 
 .nav {
@@ -26,39 +37,46 @@
   }
 
   &__menu {
-    @extend %menu;
-    color: transparent;
-    position: relative;
+    height: 20px;
+    width: 20px;
     @media (min-width: 1024px) {
       display: none;
     }
-    &::before {
-      @extend %menu;
-      content: "";
-      position: absolute;
-      top: 8px;
+
+    &:hover {
+      box-shadow: none;
     }
-    &::after {
-      @extend %menu;
-      bottom: 8px;
-      content: "";
-      left: 0;
-      position: absolute;
+
+    &--open {
+      background-color: $PRIMARY_COLOR;
+      height: 2px;
+      position: relative;
+      &::before {
+        @extend %menu-open;
+        top: 8px;
+      }
+      &::after {
+        @extend %menu-open;
+        bottom: 8px;
+      }
+    }
+
+    &--close {
+      height: 24px;
+      position: relative;
+      width: 24px;
+      &::before {
+        @extend %menu-close;
+        transform: rotate(45deg);
+      }
+      &::after {
+        @extend %menu-close;
+        transform: rotate(-45deg);
+      }
     }
   }
 
-  &__current:after {
-    background-color: $PRIMARY_COLOR;
-    border-radius: 8px;
-    bottom: -8px;
-    content: "";
-    height: 4px;
-    left: 50%;
-    position: absolute;
-    width: 12px;
-  }
-
-  ul {
+  &__list {
     align-items: center;
     background-color: $SECONDARY_BACKGROUND_COLOR;
     box-shadow: 0 4px 4px black;
@@ -66,6 +84,7 @@
     flex-direction: column;
     gap: 24px;
     left: 0;
+    padding-bottom: 24px;
     position: absolute;
     top: 56px;
     width: 100%;
@@ -76,11 +95,23 @@
       position: static;
     }
 
-    li {
+    &__item {
       position: relative;
-      &:last-child {
-        padding-bottom: 16px;
+
+      &--current {
+        @extend .nav__list__item;
+        &:after {
+          background-color: $PRIMARY_COLOR;
+          border-radius: 8px;
+          bottom: -8px;
+          content: "";
+          height: 4px;
+          left: 50%;
+          position: absolute;
+          width: 12px;
+        }
       }
+
       a {
         text-decoration: none;
       }
