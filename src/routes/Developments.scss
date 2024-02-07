@@ -3,11 +3,20 @@
 .developments {
   align-items: center;
   display: flex;
+  flex-direction: column;
+  flex: 1;
   gap: 48px;
-  margin: 0 48px;
+  margin: 24px;
   width: 100%;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin: 0 48px;
+  }
+
   &__list {
+    display: flex;
+    flex-direction: column;
     margin-left: 32px;
     max-width: 300px;
     min-width: 300px;
@@ -27,11 +36,15 @@
   }
 
   &__content {
+    align-items: center;
+    display: flex;
     flex-grow: 1;
+    width: 100%;
   }
 }
 
 .development {
+  order: 1;
   position: relative;
 
   &::before {
@@ -46,18 +59,34 @@
     width: 8px;
   }
 
+  &--current {
+    @extend .development;
+    order: 2;
+    @media (min-width: 1024px) {
+      order: 1;
+    }
+
+    .development__title {
+      color: $PRIMARY_COLOR;
+      font-size: 40px;
+      @media (min-width: 1024px) {
+        font-size: 48px;
+      }
+    }
+  }
+
   &__title {
     color: $SECONDARY_TEXT_COLOR;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 32px;
+    order: 2;
+
+    @media (min-width: 1024px) {
+      font-size: 40px;
+    }
 
     &:hover {
       color: $PRIMARY_COLOR;
-    }
-
-    &--current {
-      color: $PRIMARY_COLOR;
-      font-size: 48px;
     }
   }
 
