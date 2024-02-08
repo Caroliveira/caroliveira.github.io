@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./AchievementCard.scss";
 import PropTypes from "prop-types";
+import styles from "./styles.module.scss";
 
 const AchievementCard = ({ title, description, img, imgAlt }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
     <button
-      className="achvCard"
+      className={styles.achvCard}
       onClick={() => setShowDetails(!showDetails)}
       aria-expanded={showDetails}
       aria-label={
@@ -17,12 +17,12 @@ const AchievementCard = ({ title, description, img, imgAlt }) => {
       }
     >
       {showDetails ? (
-        <div className="achvCard__details">
+        <div className={styles.achvCard__details}>
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
       ) : (
-        <img src={img} alt={imgAlt} className="achvCard__image" />
+        <img src={img} alt={imgAlt} className={styles.achvCard__image} />
       )}
     </button>
   );

@@ -1,7 +1,7 @@
-import AchievementCard from "./AchievementCard";
-import bizCapital from "../assets/images/bizCapital.jpg";
-import andela from "../assets/images/andela.jpg";
-import "./Achievements.scss";
+import AchievementCard from "../AchievementCard";
+import bizCapital from "../../assets/images/bizCapital.jpg";
+import andela from "../../assets/images/andela.jpg";
+import styles from "./styles.module.scss";
 
 const achievements = [
   {
@@ -22,7 +22,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className="achievements">
+    <div className={styles.achievements}>
       {achievements.map((achv) => (
         <AchievementCard key={achv.title} {...achv} />
       ))}

@@ -1,9 +1,9 @@
-import Candles from "./Candles";
-import "./Experiments.scss";
+import Candles from "../Candles";
+import styles from "./styles.module.scss";
 
 const Experiments = () => {
   return (
-    <div className="experiments">
+    <div className={styles.experiments}>
       <Candles />
       <p>
         See{" "}

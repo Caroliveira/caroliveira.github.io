@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { DEVELOPMENTS } from "../utils/constants";
-import "./Developments.scss";
+import { DEVELOPMENTS } from "./constants";
+import styles from "./styles.module.scss";
 
 const Developments = () => {
   const [current, setCurrent] = useState(2);
@@ -11,14 +11,14 @@ const Developments = () => {
     return (
       <li key={type}>
         <button
-          className={buttonClassName}
+          className={styles[buttonClassName]}
           onClick={() => setCurrent(index)}
           aria-label={`Display ${type}`}
           aria-expanded={isCurrent}
         >
-          <h2 className="development__title">{type}</h2>
+          <h2 className={styles.development__title}>{type}</h2>
           {isCurrent && (
-            <p className="development__description">{description}</p>
+            <p className={styles.development__description}>{description}</p>
           )}
         </button>
       </li>
@@ -26,9 +26,11 @@ const Developments = () => {
   };
 
   return (
-    <div className="developments">
-      <ul className="developments__list">{DEVELOPMENTS.map(renderListItem)}</ul>
-      <div className="developments__content">
+    <div className={styles.developments}>
+      <ul className={styles.developments__list}>
+        {DEVELOPMENTS.map(renderListItem)}
+      </ul>
+      <div className={styles.developments__content}>
         {DEVELOPMENTS[current].content}
       </div>
     </div>

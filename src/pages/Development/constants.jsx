@@ -1,12 +1,6 @@
-import Experiments from "../components/Experiments";
-import Projects from "../components/Projects";
-import Achievements from "../components/Achievements";
-
-export const ROUTES = [
-  { name: "Home", path: "/" },
-  { name: "Developments", path: "/developments" },
-  { name: "Contact", path: "/contact" },
-];
+import Achievements from "../../components/Achievements";
+import Experiments from "../../components/Experiments";
+import Projects from "../../components/Projects";
 
 export const DEVELOPMENTS = [
   {

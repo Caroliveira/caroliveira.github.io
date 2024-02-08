@@ -1,12 +1,16 @@
 import picture from "/src/assets/images/lina-picture.jpg";
-import "./Contact.scss";
+import styles from "./styles.module.scss";
 
 const Contact = () => {
   return (
-    <div className="contact">
-      <img alt="Picture of Lina." className="contact__picture" src={picture} />
-      <div className="contact__content">
-        <h1 className="contact__title">Connect with me</h1>
+    <div className={styles.contact}>
+      <img
+        alt="Picture of Lina."
+        className={styles.contact__picture}
+        src={picture}
+      />
+      <div className={styles.contact__content}>
+        <h1 className={styles.contact__title}>Connect with me</h1>
         <ul>
           <li>
             on{" "}
