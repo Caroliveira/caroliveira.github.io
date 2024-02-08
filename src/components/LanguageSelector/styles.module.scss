@@ -1,0 +1,67 @@
+@import "../../assets/styles/variables";
+
+.selector {
+  &__trigger {
+    align-items: center;
+    background-color: $SECONDARY_TEXT_COLOR;
+    border-radius: 50px;
+    color: $SECONDARY_BACKGROUND_COLOR;
+    display: inline-flex;
+    font-size: 12px;
+    gap: 4px;
+    height: 26px;
+    justify-content: center;
+    width: 50px;
+    &:hover,
+    &:focus {
+      background-color: $PRIMARY_TEXT_COLOR;
+      box-shadow: 0 0 0 2px black;
+    }
+    &[data-state="open"] {
+      background-color: $PRIMARY_TEXT_COLOR;
+    }
+  }
+
+  &__icon {
+    color: $SECONDARY_BACKGROUND_COLOR;
+    font-size: 8px;
+  }
+
+  &__content {
+    background-color: $PRIMARY_TEXT_COLOR;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px black;
+    overflow: hidden;
+    width: 50px;
+    z-index: 1;
+  }
+
+  &__viewport {
+    padding: 2px;
+  }
+
+  &__item {
+    align-items: center;
+    border-radius: 4px;
+    color: $SECONDARY_BACKGROUND_COLOR;
+    display: flex;
+    font-size: 12px;
+    height: 26px;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    &:not(&:first-child) {
+      margin-top: 2px;
+    }
+    &[data-highlighted] {
+      background-color: $SECONDARY_BACKGROUND_COLOR;
+      color: $PRIMARY_TEXT_COLOR;
+      outline: none;
+    }
+    &[data-state="checked"] {
+      background-color: $PRIMARY_BACKGROUND_COLOR;
+      color: $PRIMARY_TEXT_COLOR;
+      outline: none;
+    }
+  }
+}

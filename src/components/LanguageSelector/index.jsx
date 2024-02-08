@@ -1,18 +1,39 @@
 import { useTranslation } from "react-i18next";
+import * as Select from "@radix-ui/react-select";
+import styles from "./styles.module.scss";
+
+const LANGUAGES = ["en", "pt"];
 
 const LanguageSelector = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   return (
-    <div>
-      <span>{t("languageSelector.label")} </span>
-      <button onClick={() => i18n.changeLanguage("pt")}>
-        {t("languageSelector.languages.pt")}
-      </button>
-      &nbsp;
-      <button onClick={() => i18n.changeLanguage("en")}>
-        {t("languageSelector.languages.en")}
-      </button>
-    </div>
+    <Select.Root
+      value={i18n.language}
+      onValueChange={(vl) => {
+        console.log(vl);
+        i18n.changeLanguage(vl);
+      }}
+    >
+      <Select.Trigger className={styles.selector__trigger} aria-label="Food">
+        <Select.Value>{i18n.language.toUpperCase()}</Select.Value>
+        <Select.Icon className={styles.selector__icon} />
+      </Select.Trigger>
+      <Select.Portal>
+        <Select.Content className={styles.selector__content} position="popper">
+          <Select.Viewport className={styles.selector__viewport}>
+            {LANGUAGES.map((language) => (
+              <Select.Item
+                key={language}
+                value={language}
+                className={styles.selector__item}
+              >
+                <Select.ItemText>{language.toUpperCase()}</Select.ItemText>
+              </Select.Item>
+            ))}
+          </Select.Viewport>
+        </Select.Content>
+      </Select.Portal>
+    </Select.Root>
   );
 };
 

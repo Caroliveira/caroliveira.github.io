@@ -17,13 +17,7 @@
     },
     "candles": {},
     "experiments": {},
-    "languageSelector": {
-        "label": "Selecione um idioma:",
-        "languages": {
-            "en": "Inglês",
-            "pt": "Português"
-        }
-    },
+    "languageSelector": {},
     "layout": {},
     "nav": {
         "open": "Abrir",
