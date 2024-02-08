@@ -1,24 +1,40 @@
 import { useState } from "react";
-import { DEVELOPMENTS } from "./constants";
+import { useTranslation } from "react-i18next";
+import Achievements from "../../components/Achievements";
+import Experiments from "../../components/Experiments";
+import Projects from "../../components/Projects";
 import styles from "./styles.module.scss";
 
+const DEVELOPMENTS = [
+  { nameKey: "projects", content: <Projects /> },
+  { nameKey: "experiments", content: <Experiments /> },
+  { nameKey: "achievements", content: <Achievements /> },
+];
+
 const Developments = () => {
+  const { t } = useTranslation("pages");
   const [current, setCurrent] = useState(2);
 
-  const renderListItem = ({ type, description }, index) => {
+  const renderListItem = ({ nameKey }, index) => {
     const isCurrent = index === current;
     const buttonClassName = `development${isCurrent ? "--current" : ""}`;
     return (
-      <li key={type}>
+      <li key={nameKey}>
         <button
           className={styles[buttonClassName]}
           onClick={() => setCurrent(index)}
-          aria-label={`Display ${type}`}
           aria-expanded={isCurrent}
+          aria-label={`${t("developments.display")} ${t(
+            `developments.${nameKey}.type`
+          )}`}
         >
-          <h2 className={styles.development__title}>{type}</h2>
+          <h2 className={styles.development__title}>
+            {t(`developments.${nameKey}.type`)}
+          </h2>
           {isCurrent && (
-            <p className={styles.development__description}>{description}</p>
+            <p className={styles.development__description}>
+              {t(`developments.${nameKey}.description`)}
+            </p>
           )}
         </button>
       </li>

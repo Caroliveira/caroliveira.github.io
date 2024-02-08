@@ -1,26 +1,31 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import illustration from "/src/assets/images/lina-illustration.png";
 import styles from "./styles.module.scss";
 
 const Home = () => {
+  const { t } = useTranslation("pages");
   const navigate = useNavigate();
+
   return (
     <>
       <div>
         <h1 className={styles.home__intro}>
-          Hey there! <br />
-          I&apos;m <strong>Lina Oliveira</strong>, <br />
+          {t("home.title.hello")} <br />
+          {t("home.title.intro")} <strong>Lina Oliveira</strong>, <br />
           Front end Developer
         </h1>
         <div className={styles.home__buttons}>
           <button onClick={() => navigate("/developments")}>
-            Learn more about me
+            {t("home.button.about")}
           </button>
-          <button onClick={() => navigate("/contact")}>Get in touch</button>
+          <button onClick={() => navigate("/contact")}>
+            {t("home.button.contact")}
+          </button>
         </div>
       </div>
       <img
-        alt="Illustration of Lina, a woman with olive skin tone, dark brown eyes, and curly black hair in a bob cut."
+        alt={t("home.illustrationAlt")}
         src={illustration}
         className={styles.home__illustration}
       />

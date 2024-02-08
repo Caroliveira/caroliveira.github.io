@@ -1,0 +1,42 @@
+{
+    "contact": {
+        "pictureAlt": "Picture of Lina",
+        "title": "Connect with me",
+        "through": {
+            "prevLinkedIn": "on",
+            "prevResume": "download my",
+            "resume": "Resume",
+            "prevGitHub": "take a look at my",
+            "prevCodePen": "check out my",
+            "prevEmail": "or",
+            "email": "Email",
+            "postEmail": "me"
+        }
+    },
+    "developments": {
+        "display": "Display",
+        "projects": {
+            "type": "Projects",
+            "description": "Some personal projects I worked on my own to improve my skills, showcase my work or just to take an idea of the paper"
+        },
+        "experiments": {
+            "type": "Experiments",
+            "description": "Here are some stuff I think is worth saving or just got curious and tried some small thing on CodePen"
+        },
+        "achievements": {
+            "type": "Achievements",
+            "description": "Check out my highlights to see how I've grown and stayed dedicated to doing great work"
+        }
+    },
+    "home": {
+        "title": {
+            "hello": "Hey there!",
+            "intro": "I'm"
+        },
+        "button": {
+            "about": "Learn more about me",
+            "contact": "Get in touch"
+        },
+        "illustrationAlt": "Illustration of Lina, a woman with olive skin tone, dark brown eyes, and curly black hair in a bob cut."
+    }
+}

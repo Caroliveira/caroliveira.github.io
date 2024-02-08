@@ -1,19 +1,22 @@
 import picture from "/src/assets/images/lina-picture.jpg";
 import styles from "./styles.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation("pages");
+
   return (
     <div className={styles.contact}>
       <img
-        alt="Picture of Lina."
+        alt={t("contact.pictureAlt")}
         className={styles.contact__picture}
         src={picture}
       />
       <div className={styles.contact__content}>
-        <h1 className={styles.contact__title}>Connect with me</h1>
+        <h1 className={styles.contact__title}>{t("contact.title")}</h1>
         <ul>
           <li>
-            on{" "}
+            {t("contact.through.prevLinkedIn")}{" "}
             <a
               href="https://www.linkedin.com/in/carolina-ribeiro-oliveira/"
               target="_blank"
@@ -24,14 +27,14 @@ const Contact = () => {
             ,
           </li>
           <li>
-            download my{" "}
+            {t("contact.through.prevResume")}{" "}
             <a href="/carolina-oliveira-resume.pdf" download>
-              Resume
+              {t("contact.through.resume")}
             </a>
             ,
           </li>
           <li>
-            take a look at my{" "}
+            {t("contact.through.prevGitHub")}{" "}
             <a
               href="https://github.com/Caroliveira"
               target="_blank"
@@ -42,7 +45,7 @@ const Contact = () => {
             ,
           </li>
           <li>
-            check out my{" "}
+            {t("contact.through.prevCodePen")}{" "}
             <a
               href="https://codepen.io/caroliveira"
               target="_blank"
@@ -52,7 +55,11 @@ const Contact = () => {
             </a>
           </li>
           <li>
-            or <a href="mailto:linaribeirooliveira@gmail.com"> Email</a> me
+            {t("contact.through.prevEmail")}{" "}
+            <a href="mailto:linaribeirooliveira@gmail.com">
+              {t("contact.through.email")}
+            </a>{" "}
+            {t("contact.through.postEmail")}
           </li>
         </ul>
       </div>

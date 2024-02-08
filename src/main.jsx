@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 
 import Layout from "./components/Layout";
 import "./assets/styles/index.scss";
+import "./i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -1,9 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
+import LanguageSelector from "../LanguageSelector";
 import logo from "/logo.png";
-import { ROUTES } from "./constants";
 import styles from "./styles.module.scss";
+
+const ROUTES = [
+  { name: "Home", path: "/" },
+  { name: "Developments", path: "/developments" },
+  { name: "Contact", path: "/contact" },
+];
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -37,15 +43,6 @@ const Nav = () => {
       <Link to="/" className={styles.nav__logo}>
         <img alt="Lina Logo" src={logo} />
       </Link>
-      <button
-        className={styles.nav__menu}
-        onClick={handleLogoClick}
-        aria-expanded={openNav}
-        aria-controls="navigation"
-        aria-label={`${openNav ? "Close" : "Open"} menu`}
-      >
-        <div className={styles[`nav__menu${openNav ? "--close" : "--open"}`]} />
-      </button>
       {openNav && (
         <ul
           id="navigation"
@@ -55,6 +52,16 @@ const Nav = () => {
           {ROUTES.map(renderNavLink)}
         </ul>
       )}
+      <LanguageSelector />
+      <button
+        className={styles.nav__menu}
+        onClick={handleLogoClick}
+        aria-expanded={openNav}
+        aria-controls="navigation"
+        aria-label={`${openNav ? "Close" : "Open"} menu`}
+      >
+        <div className={styles[`nav__menu${openNav ? "--close" : "--open"}`]} />
+      </button>
     </nav>
   );
 };

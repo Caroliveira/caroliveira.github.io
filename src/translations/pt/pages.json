@@ -1,0 +1,42 @@
+{
+    "contact": {
+        "pictureAlt": "Foto de Lina",
+        "title": "Conecte comigo",
+        "through": {
+            "prevLinkedIn": "pelo",
+            "prevResume": "baixe meu",
+            "resume": "Currículo",
+            "prevGitHub": "de uma olhada no meu",
+            "prevCodePen": "confira meu",
+            "prevEmail": "ou me mande um",
+            "email": "E-mail",
+            "postEmail": ""
+        }
+    },
+    "developments": {
+        "display": "Exibir",
+        "projects": {
+            "type": "Projetos",
+            "description": "Alguns projetos pessoais que trabalhei por conta para aprimorar minhas habilidades, mostrar meu trabalho ou apenas para tirar uma ideia do papel"
+        },
+        "experiments": {
+            "type": "Experimentos",
+            "description": "Aqui estão algumas coisas que acho que vale a pena salvar ou apenas fiquei curiosa e testei algumas coisinhas no CodePen"
+        },
+        "achievements": {
+            "type": "Realizações",
+            "description": "Confira os meus destaques para ver como evolui e me mantive dedicada a fazer um trabalho cada vez melhor"
+        }
+    },
+    "home": {
+        "title": {
+            "hello": "Oi oi!",
+            "intro": "Eu sou a"
+        },
+        "button": {
+            "about": "Saiba mais sobre mim",
+            "contact": "Entre em contato"
+        },
+        "illustrationAlt": "Illustração de Lina, uma mulher de pele morena, olhos castanho escuro, e cabelo cacheado preto com um corte estilo bob."
+    }
+}

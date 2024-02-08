@@ -1,0 +1,9 @@
+{
+    "languageSelector": {
+        "label": "Selecione um idioma:",
+        "languages": {
+            "en": "Inglês",
+            "pt": "Português"
+        }
+    }
+}
