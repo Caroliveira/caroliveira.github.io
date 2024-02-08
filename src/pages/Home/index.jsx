@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.home}>
         <h1 className={styles.home__intro}>
           {t("home.title.hello")} <br />
           {t("home.title.intro")} <strong>Lina Oliveira</strong>, <br />

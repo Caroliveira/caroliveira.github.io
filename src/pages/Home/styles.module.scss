@@ -1,6 +1,10 @@
 @import "../../assets/styles/variables";
 
 .home {
+  @media (min-width: 1024px) {
+    min-width: 500px;
+  }
+
   &__intro {
     color: $PRIMARY_TEXT_COLOR;
     font-weight: 400;
