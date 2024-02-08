@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 const LanguageSelector = () => {
-  const { t, i18n } = useTranslation("components");
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <span>{t("languageSelector.label")} </span>

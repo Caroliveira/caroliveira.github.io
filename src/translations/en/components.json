@@ -5,7 +5,7 @@
         "list": {
             "bizCapital": {
                 "title": "Integration of PIX Payment System at BizCapital",
-                "description": "The most challenging project for me was the integration of Brazil's instant payment system, PIX, at BizCapital, mid its early adoption phase in the digital banking sector. This project was a significant learning curve, marking my first experience with React Native and TypeScript against a pressing deadline. The initiative required quick adaptation to these new technologies and innovative problem-solving, as there was limited precedent for such implementations in Brazil at the time.",
+                "description": "The most challenging project for me was the integration of Brazil's instant payment system, PIX, at BizCapital, mid its early adoption phase in the digital banking sector. This project was a significant learning curve, marking my first experience with React Native, TypeScript and Apollo Client against a pressing deadline. The initiative required quick adaptation to these new technologies and fast problem-solving, as there was limited precedent for such implementations in Brazil at the time.",
                 "imgAlt": "Company BizCapital logo"
             },
             "andela": {
@@ -25,6 +25,18 @@
         }
     },
     "layout": {},
-    "nav": {},
-    "projects": {}
+    "nav": {
+        "open": "Open",
+        "close": "Close",
+        "menuLabel": "navigation menu",
+        "routes": {
+            "home": "Home",
+            "developments": "Developments",
+            "contact": "Contact"
+        }
+    },
+    "projects": {
+        "sorry": "Sorry, I don't have projects to show yet...",
+        "lookAround": "Feel free to take a look on my experiments or at my work =D"
+    }
 }

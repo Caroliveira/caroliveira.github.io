@@ -1,19 +1,22 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
 import LanguageSelector from "../LanguageSelector";
 import logo from "/logo.png";
 import styles from "./styles.module.scss";
 
 const ROUTES = [
-  { name: "Home", path: "/" },
-  { name: "Developments", path: "/developments" },
-  { name: "Contact", path: "/contact" },
+  { nameKey: "home", path: "/" },
+  { nameKey: "developments", path: "/developments" },
+  { nameKey: "contact", path: "/contact" },
 ];
 
 const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation("components");
+
   const isCollapsibleNav = window.innerWidth < 1024;
   const [openNav, setOpenNav] = useState(!isCollapsibleNav);
   const navRef = useRef();
@@ -28,12 +31,12 @@ const Nav = () => {
     isCollapsibleNav ? setOpenNav(!openNav) : navigate("/");
   };
 
-  const renderNavLink = ({ name, path }) => {
+  const renderNavLink = ({ nameKey, path }) => {
     const isCurrent = path === location.pathname;
     const navLiClassName = `nav__list__item${isCurrent ? "--current" : ""}`;
     return (
-      <li key={name} className={styles[navLiClassName]}>
-        <Link to={path}>{name}</Link>
+      <li key={nameKey} className={styles[navLiClassName]}>
+        <Link to={path}>{t(`nav.routes.${nameKey}`)}</Link>
       </li>
     );
   };
@@ -44,11 +47,7 @@ const Nav = () => {
         <img alt="Lina Logo" src={logo} />
       </Link>
       {openNav && (
-        <ul
-          id="navigation"
-          aria-label="Main navigation"
-          className={styles.nav__list}
-        >
+        <ul id="navigation" className={styles.nav__list}>
           {ROUTES.map(renderNavLink)}
         </ul>
       )}
@@ -58,7 +57,9 @@ const Nav = () => {
         onClick={handleLogoClick}
         aria-expanded={openNav}
         aria-controls="navigation"
-        aria-label={`${openNav ? "Close" : "Open"} menu`}
+        aria-label={`${t(`nav.${openNav ? "close" : "open"}`)} ${t(
+          "menuLabel"
+        )}`}
       >
         <div className={styles[`nav__menu${openNav ? "--close" : "--open"}`]} />
       </button>

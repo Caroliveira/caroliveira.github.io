@@ -5,13 +5,7 @@ const Experiments = () => {
   return (
     <div className={styles.experiments}>
       <Candles />
-      <p>
-        See{" "}
-        <a href="https://codepen.io/caroliveira/pen/rNOmOjb">
-          Pure CSS Candles
-        </a>{" "}
-        on <a href="https://codepen.io">CodePen</a>.
-      </p>
+      <a href="https://codepen.io/caroliveira/pen/rNOmOjb">Pure CSS Candles</a>
     </div>
   );
 };

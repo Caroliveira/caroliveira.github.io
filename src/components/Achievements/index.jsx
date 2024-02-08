@@ -10,7 +10,7 @@ const achievements = [
 ];
 
 const Achievements = () => {
-  const { t } = useTranslation("components");
+  const { t } = useTranslation();
   const [showDetails, setShowDetails] = useState("");
 
   const renderAchvCard = ({ nameKey, img }) => {

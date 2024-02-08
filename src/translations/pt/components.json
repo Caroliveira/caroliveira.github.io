@@ -1,9 +1,42 @@
 {
+    "achievements": {
+        "collapse": "Recolher detalhes de",
+        "expand": "Expandir detalhes de",
+        "list": {
+            "bizCapital": {
+                "title": "Integração do Sistema de Pagamento PIX na BizCapital",
+                "description": "O projeto mais desafiador para mim foi a integração do sistema de pagamento instantâneo do Brasil, PIX, no BizCapital, em meio à sua fase inicial de adoção no setor bancário digital. Este projeto foi uma curva de aprendizado significativa, marcando minha primeira experiência com React Native, TypeScript e Apollo Client em um prazo urgente. A iniciativa exigia rápida adaptação a essas novas tecnologias e rápida resolução de problemas, já que havia precedentes limitados para tais implementações no Brasil na época.",
+                "imgAlt": "Logo da empresa BizCapital"
+            },
+            "andela": {
+                "title": "Da iniciativa ao impacto na Andela",
+                "description": "O projeto mais gratificante para mim na Andela não foi apenas um projeto, mas toda a experiência que levou à minha promoção. Antes de o título ser oficializado, eu já estava envolvida, liderando iniciativas interessantes que mudaram a forma como fazíamos as coisas, desde os padrões de codificação até a forma como abordávamos o gerenciamento de projetos e trabalhávamos juntos. O objetivo era tornar nosso software melhor, nossa equipe mais forte e nossa vida profissional mais agradável. Essa promoção? Foi apenas a cereja do bolo, reconhecendo o papel de liderança que já vinha assumindo. É a jornada e as pessoas com quem a compartilhei que realmente importam.",
+                "imgAlt": "Logo da empresa Andela"
+            }
+        }
+    },
+    "candles": {},
+    "experiments": {},
     "languageSelector": {
         "label": "Selecione um idioma:",
         "languages": {
             "en": "Inglês",
             "pt": "Português"
         }
+    },
+    "layout": {},
+    "nav": {
+        "open": "Abrir",
+        "close": "Fechar",
+        "menuLabel": "menu de navegação",
+        "routes": {
+            "home": "Introdução",
+            "developments": "Desenvolvimentos",
+            "contact": "Contato"
+        }
+    },
+    "projects": {
+        "sorry": "Desculpe, ainda não tenho projetos para mostrar...",
+        "lookAround": "Fique à vontade para dar uma olhada nos meus experimentos ou no meu trabalho =D"
     }
 }
