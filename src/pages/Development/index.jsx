@@ -17,12 +17,12 @@ const Developments = () => {
 
   const renderListItem = ({ nameKey }, index) => {
     const isCurrent = index === current;
-    const buttonClassName = `development${isCurrent ? "--current" : ""}`;
+    const liClassName = `development${isCurrent ? "--current" : ""}`;
     return (
-      <li key={nameKey}>
+      <li key={nameKey} className={styles[liClassName]}>
         <button
-          className={styles[buttonClassName]}
           onClick={() => setCurrent(index)}
+          className={styles.development__button}
           aria-expanded={isCurrent}
           aria-label={`${t("developments.display")} ${t(
             `developments.${nameKey}.type`

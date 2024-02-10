@@ -46,15 +46,9 @@
 }
 
 .development {
-  background-color: transparent;
   border-radius: 0;
   order: 1;
   position: relative;
-  text-align: start;
-
-  &:hover {
-    box-shadow: none;
-  }
 
   &::before {
     background-color: var(--secondary-text-color);
@@ -84,11 +78,18 @@
     }
   }
 
+  &__button {
+    background-color: transparent;
+    text-align: start;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
   &__title {
     color: var(--secondary-text-color);
     cursor: pointer;
     font-size: 32px;
-    order: 2;
 
     @media (min-width: 1024px) {
       font-size: 40px;
