@@ -16,7 +16,8 @@
 
   &__wrapper {
     @media (min-width: 1024px) {
-      min-width: 300px;
+      min-width: 350px;
+      height: 300px;
     }
   }
 
@@ -30,8 +31,7 @@
     @media (min-width: 1024px) {
       min-width: 300px;
       position: fixed;
-      top: 0;
-      translate: 0 100%;
+      top: calc(50% - 150px);
     }
 
     &::before {
@@ -122,6 +122,7 @@
   }
 
   &__description {
+    max-width: 300px;
     color: var(--secondary-text-color);
   }
 }
