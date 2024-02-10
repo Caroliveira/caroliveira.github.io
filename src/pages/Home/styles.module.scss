@@ -6,7 +6,7 @@
   }
 
   &__intro {
-    color: $PRIMARY_TEXT_COLOR;
+    color: var(--primary-text-color);
     font-weight: 400;
     strong {
       color: $PRIMARY_COLOR;
@@ -14,7 +14,7 @@
   }
 
   &__illustration {
-    background-color: $SECONDARY_BACKGROUND_COLOR;
+    background-color: var(--image-background-color);
     border-radius: 8px;
     border: 2px solid $PRIMARY_COLOR;
     max-width: 90%;
@@ -34,13 +34,13 @@
     }
 
     button {
-      background-color: $PRIMARY_COLOR;
       border-radius: 50px;
       border: 1px solid $PRIMARY_COLOR;
       font-size: 20px;
       padding: 4px 16px;
-      &:first-child {
-        background-color: $SECONDARY_BACKGROUND_COLOR;
+      &:last-child {
+        color: $PRIMARY_TEXT_COLOR;
+        background-color: $PRIMARY_COLOR;
       }
     }
   }

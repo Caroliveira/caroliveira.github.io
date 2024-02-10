@@ -6,8 +6,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: $PRIMARY_TEXT_COLOR;
-  background-color: $PRIMARY_BACKGROUND_COLOR;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,7 +18,26 @@
 }
 
 body {
+  --primary-background-color: #{$PRIMARY_BACKGROUND_COLOR};
+  --secondary-background-color: #{$SECONDARY_BACKGROUND_COLOR};
+  --image-background-color: #{$SECONDARY_BACKGROUND_COLOR};
+  --primary-text-color: #{$PRIMARY_TEXT_COLOR};
+  --secondary-text-color: #{$SECONDARY_TEXT_COLOR};
+  --box-shadow: 0 2px 10px black;
+
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
   margin: 0;
+
+  &.light {
+    // still going to figure colors out
+    --primary-background-color: #d6d6d6;
+    --secondary-background-color: #ccc;
+    --image-background-color: #{$PRIMARY_COLOR};
+    --primary-text-color: #{$PRIMARY_BACKGROUND_COLOR};
+    --secondary-text-color: #525252;
+    --box-shadow: 0 4px 8px #343434;
+  }
 }
 
 main {
@@ -55,7 +72,7 @@ p {
 }
 
 a {
-  color: $PRIMARY_TEXT_COLOR;
+  color: var(--primary-text-color);
   &:hover {
     color: $PRIMARY_COLOR;
   }
@@ -71,7 +88,7 @@ button {
   padding: 0;
   width: fit-content;
   &:hover {
-    box-shadow: 0 2px 10px black;
+    box-shadow: var(--box-shadow);
   }
 }
 
@@ -85,4 +102,5 @@ ul {
 footer {
   padding: 16px;
   text-align: center;
+  color: var(--secondary-text-color);
 }

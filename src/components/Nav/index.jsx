@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
+import { ThemeContext } from "../../hooks/useThemeContext";
 import LanguageSelector from "../LanguageSelector";
 import logo from "/logo.png";
 import styles from "./styles.module.scss";
@@ -16,6 +17,7 @@ const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation("components");
+  const { darkModeOn, setDarkModeOn } = useContext(ThemeContext);
 
   const isCollapsibleNav = window.innerWidth < 1024;
   const [openNav, setOpenNav] = useState(!isCollapsibleNav);
@@ -52,6 +54,13 @@ const Nav = () => {
         </ul>
       )}
       <LanguageSelector />
+
+      <button color="link" onClick={() => setDarkModeOn(!darkModeOn)}>
+        <span className="d-lg-none d-md-block">
+          Switch to {darkModeOn ? "light" : "dark"} mode
+        </span>
+      </button>
+
       <button
         className={styles.nav__menu}
         onClick={handleLogoClick}
