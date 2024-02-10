@@ -8,7 +8,7 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeContextProvider = ({ children }) => {
-  const [darkModeOn, setDarkModeOn] = useState(true);
+  const [darkModeOn, setDarkModeOn] = useState(false);
 
   useEffect(() => {
     if (darkModeOn) document.body.classList.remove("light");

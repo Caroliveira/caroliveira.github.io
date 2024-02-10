@@ -3,9 +3,9 @@
 .selector {
   &__trigger {
     align-items: center;
-    background-color: $SECONDARY_TEXT_COLOR;
+    background-color: $LIGHT_GRAY_COLOR;
     border-radius: 50px;
-    color: $SECONDARY_BACKGROUND_COLOR;
+    color: $DARK_GRAY_COLOR;
     display: inline-flex;
     font-size: 12px;
     gap: 4px;
@@ -14,21 +14,21 @@
     width: 50px;
     &:hover,
     &:focus {
-      background-color: $PRIMARY_TEXT_COLOR;
+      background-color: $LIGHTER_GRAY_COLOR;
       box-shadow: 0 0 0 2px black;
     }
     &[data-state="open"] {
-      background-color: $PRIMARY_TEXT_COLOR;
+      background-color: $LIGHTER_GRAY_COLOR;
     }
   }
 
   &__icon {
-    color: $SECONDARY_BACKGROUND_COLOR;
+    color: $DARK_GRAY_COLOR;
     font-size: 8px;
   }
 
   &__content {
-    background-color: $PRIMARY_TEXT_COLOR;
+    background-color: $LIGHTER_GRAY_COLOR;
     border-radius: 4px;
     box-shadow: 0 2px 2px black;
     overflow: hidden;
@@ -43,7 +43,7 @@
   &__item {
     align-items: center;
     border-radius: 4px;
-    color: $SECONDARY_BACKGROUND_COLOR;
+    color: $DARK_GRAY_COLOR;
     display: flex;
     font-size: 12px;
     height: 26px;
@@ -54,13 +54,13 @@
       margin-top: 2px;
     }
     &[data-highlighted] {
-      background-color: $SECONDARY_BACKGROUND_COLOR;
-      color: $PRIMARY_TEXT_COLOR;
+      background-color: $DARK_GRAY_COLOR;
+      color: $LIGHTER_GRAY_COLOR;
       outline: none;
     }
     &[data-state="checked"] {
-      background-color: $PRIMARY_BACKGROUND_COLOR;
-      color: $PRIMARY_TEXT_COLOR;
+      background-color: $DARKER_GRAY_COLOR;
+      color: $LIGHTER_GRAY_COLOR;
       outline: none;
     }
   }

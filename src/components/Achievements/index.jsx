@@ -14,19 +14,20 @@ const Achievements = () => {
   const [showDetails, setShowDetails] = useState("");
 
   const renderAchvCard = ({ nameKey, img }) => {
+    const showCurrent = showDetails === nameKey;
     const buttonAriaLabel = `${t(
-      `achievements.${showDetails ? "collapse" : "expand"}`
+      `achievements.${showCurrent ? "collapse" : "expand"}`
     )} ${t(`achievements.list.${nameKey}.title`)}`;
 
     return (
       <button
         key={nameKey}
-        className={styles.achv__card}
-        onClick={() => setShowDetails(nameKey === showDetails ? "" : nameKey)}
+        className={styles[`achv__card${showCurrent ? "--expanded" : ""}`]}
+        onClick={() => setShowDetails(showCurrent ? "" : nameKey)}
         aria-label={buttonAriaLabel}
-        aria-expanded={showDetails}
+        aria-expanded={showCurrent}
       >
-        {showDetails === nameKey ? (
+        {showCurrent ? (
           <div className={styles.achv__card__details}>
             <h3>{t(`achievements.list.${nameKey}.title`)}</h3>
             <p>{t(`achievements.list.${nameKey}.description`)}</p>
