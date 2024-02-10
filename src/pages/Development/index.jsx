@@ -43,9 +43,11 @@ const Developments = () => {
 
   return (
     <div className={styles.developments}>
-      <ul className={styles.developments__list}>
-        {DEVELOPMENTS.map(renderListItem)}
-      </ul>
+      <div className={styles.developments__wrapper}>
+        <ul className={styles.developments__list}>
+          {DEVELOPMENTS.map(renderListItem)}
+        </ul>
+      </div>
       <div className={styles.developments__content}>
         {DEVELOPMENTS[current].content}
       </div>

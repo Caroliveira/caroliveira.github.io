@@ -26,6 +26,8 @@
   gap: 16px;
   justify-content: space-between;
   padding: 16px;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1;
   @media (min-width: 1024px) {
