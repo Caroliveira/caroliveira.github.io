@@ -41,8 +41,11 @@
       height: 100%;
       left: -24px;
       position: absolute;
-      top: 10px;
+      top: 4px;
       width: 4px;
+      @media (min-width: 1024px) {
+        top: 10px;
+      }
     }
   }
 
@@ -67,8 +70,11 @@
     height: 8px;
     left: -30px;
     position: absolute;
-    top: 32px;
+    top: 18px;
     width: 8px;
+    @media (min-width: 1024px) {
+      top: 26px;
+    }
   }
 
   &--current {
@@ -76,6 +82,12 @@
     order: 2;
     @media (min-width: 1024px) {
       order: 1;
+    }
+    &::before {
+      top: 24px;
+      @media (min-width: 1024px) {
+        top: 32px;
+      }
     }
 
     .development__title {
