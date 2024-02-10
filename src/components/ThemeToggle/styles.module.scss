@@ -1,0 +1,47 @@
+@import "../../assets/styles/variables";
+
+.toggle {
+  height: 26px;
+  position: relative;
+  width: 40px;
+
+  &__slider {
+    background-color: $PRIMARY_COLOR;
+    border-radius: 50px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    input:checked + & {
+      background-color: $LIGHT_GRAY_COLOR;
+    }
+
+    &:before {
+      background-color: $LIGHTER_GRAY_COLOR;
+      bottom: 4px;
+      content: "";
+      height: 18px;
+      left: 4px;
+      -webkit-mask: url("../../assets/images/sun.svg") no-repeat center;
+      mask: url("../../assets/images/sun.svg") no-repeat center;
+      position: absolute;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      width: 18px;
+
+      input:checked + & {
+        background-color: $DARKER_GRAY_COLOR;
+        -webkit-mask: url("../../assets/images/moon.svg") no-repeat center;
+        mask: url("../../assets/images/moon.svg") no-repeat center;
+        -webkit-transform: translateX(12px);
+        -ms-transform: translateX(12px);
+        transform: translateX(12px);
+      }
+    }
+  }
+}
