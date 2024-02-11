@@ -32,5 +32,9 @@
     "projects": {
         "sorry": "Desculpe, ainda não tenho projetos para mostrar...",
         "lookAround": "Fique à vontade para dar uma olhada nos meus experimentos ou no meu trabalho =D"
+    },
+    "themeToggle": {
+        "enableDarkTheme": "Habilite tema escuro",
+        "enableLightTheme": "Habilite tema claro"
     }
 }
