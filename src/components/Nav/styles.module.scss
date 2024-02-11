@@ -83,19 +83,19 @@
   &__list {
     align-items: center;
     background-color: $DARK_GRAY_COLOR;
-    box-shadow: 0 4px 4px black;
+    box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
     gap: 24px;
     left: 0;
-    padding-bottom: 24px;
+    padding: 16px 0 24px;
     position: absolute;
     top: 56px;
     width: 100%;
     @media (min-width: 1024px) {
       box-shadow: none;
       flex-direction: row;
-      padding-bottom: 0;
+      padding: 0;
       position: static;
     }
 
