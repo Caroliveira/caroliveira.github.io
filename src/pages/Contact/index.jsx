@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const { t } = useTranslation("pages");
+  const { t, i18n } = useTranslation("pages");
 
   return (
     <div className={styles.contact}>
@@ -28,7 +28,7 @@ const Contact = () => {
           </li>
           <li>
             {t("contact.through.prevResume")}{" "}
-            <a href="/carolina-oliveira-resume.pdf" download>
+            <a href={`/carolina-oliveira-resume-${i18n.language}.pdf`} download>
               {t("contact.through.resume")}
             </a>
             ,
