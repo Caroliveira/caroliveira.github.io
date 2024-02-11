@@ -13,7 +13,7 @@ export const ThemeContextProvider = ({ children }) => {
   useEffect(() => {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
     const isBrowserDark = systemTheme.matches;
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("lina_portfolio_theme");
     const isStarterDark = savedTheme ? savedTheme === "dark" : isBrowserDark;
     setDarkTheme(isStarterDark);
   }, []);
@@ -21,10 +21,10 @@ export const ThemeContextProvider = ({ children }) => {
   const setDarkTheme = (isDarkMode) => {
     setDarkModeOn(isDarkMode);
     if (isDarkMode) {
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem("lina_portfolio_theme", "dark");
       document.body.classList.remove("light");
     } else {
-      localStorage.setItem("theme", "light");
+      localStorage.setItem("lina_portfolio_theme", "light");
       document.body.classList.add("light");
     }
   };
