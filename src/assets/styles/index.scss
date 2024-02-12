@@ -23,7 +23,7 @@ body {
   --image-background-color: #{$DARK_GRAY_COLOR};
   --primary-text-color: #{$LIGHTER_GRAY_COLOR};
   --secondary-text-color: #{$LIGHT_GRAY_COLOR};
-  --box-shadow: 0 2px 10px black;
+  --box-shadow: 0 6px 8px -2px black;
 
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
