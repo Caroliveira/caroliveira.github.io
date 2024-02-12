@@ -13,7 +13,7 @@ const DEVELOPMENTS = [
 
 const Developments = () => {
   const { t } = useTranslation("pages");
-  const [current, setCurrent] = useState(2);
+  const [current, setCurrent] = useState(0);
 
   const renderListItem = ({ nameKey }, index) => {
     const isCurrent = index === current;

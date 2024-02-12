@@ -1,4 +1,20 @@
+@import "../../assets/styles/variables";
+
 .projects {
-  text-align: center;
+  text-align: start;
   width: 100%;
+  p {
+    margin: 12px;
+    font-size: 18px;
+    span {
+      color: var(--secondary-text-color);
+    }
+    a {
+      text-decoration: none;
+      color: $PRIMARY_COLOR;
+      &:hover {
+        color: rgba($PRIMARY_COLOR, 0.8);
+      }
+    }
+  }
 }

@@ -1,16 +1,34 @@
-// Placeholder until I have projects to show or ongoing
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <p className={styles.projects}>
-      {t("projects.sorry")}
-      <br />
-      {t("projects.lookAround")}
-    </p>
+    <div className={styles.projects}>
+      <p>{t("projects.underConstruction")}</p>
+      <p>
+        <Trans
+          i18nKey="projects.portfolioInvite"
+          components={{
+            a: (
+              <a
+                href="https://github.com/Caroliveira/caroliveira.github.io"
+                rel="noreferrer"
+                target="_blank"
+              />
+            ),
+          }}
+        />
+      </p>
+      <p>
+        <Trans
+          i18nKey="projects.askFeedback"
+          components={{ a: <Link to={"/contact"} /> }}
+        />
+      </p>
+    </div>
   );
 };
 

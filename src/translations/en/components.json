@@ -30,8 +30,9 @@
         }
     },
     "projects": {
-        "sorry": "Sorry, I don't have projects to show yet...",
-        "lookAround": "Feel free to take a look on my experiments or at my work =D"
+        "underConstruction": "This area is still under some adjustments. My most impactful projects have all been for clients, so for now, it's a bit empty here...",
+        "portfolioInvite": "But that doesn't mean there's nothing to see! While I'm creating something for this section, how about taking a look at <a>this portfolio code on GitHub</a>? That's where the magic starts.",
+        "askFeedback": "And since you've made it this far, why not also take a peek at my Experiments or check out my Achievements? Furthermore, my <a>contact page</a> is always open for you. It would be great to hear what you think!"
     },
     "themeToggle": {
         "enableDarkTheme": "Enable dark theme",
