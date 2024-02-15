@@ -1,11 +1,9 @@
-@import "../../assets/styles/variables";
-
 .selector {
   &__trigger {
     align-items: center;
-    background-color: $LIGHT_GRAY_COLOR;
+    background-color: var(--light-accent-color);
     border-radius: 50px;
-    color: $DARK_GRAY_COLOR;
+    color: var(--dark-accent-color);
     display: inline-flex;
     font-size: 12px;
     gap: 4px;
@@ -14,21 +12,21 @@
     width: 50px;
     &:hover,
     &:focus {
-      background-color: $LIGHTER_GRAY_COLOR;
+      background-color: var(--light-shades-color);
       box-shadow: 0 0 0 2px black;
     }
     &[data-state="open"] {
-      background-color: $LIGHTER_GRAY_COLOR;
+      background-color: var(--light-shades-color);
     }
   }
 
   &__icon {
-    color: $DARK_GRAY_COLOR;
+    color: var(--dark-accent-color);
     font-size: 8px;
   }
 
   &__content {
-    background-color: $LIGHTER_GRAY_COLOR;
+    background-color: var(--light-shades-color);
     border-radius: 4px;
     box-shadow: 0 2px 2px black;
     overflow: hidden;
@@ -43,7 +41,7 @@
   &__item {
     align-items: center;
     border-radius: 4px;
-    color: $DARK_GRAY_COLOR;
+    color: var(--dark-accent-color);
     display: flex;
     font-size: 12px;
     height: 26px;
@@ -54,13 +52,13 @@
       margin-top: 2px;
     }
     &[data-highlighted] {
-      background-color: $DARK_GRAY_COLOR;
-      color: $LIGHTER_GRAY_COLOR;
+      background-color: var(--brand-accent-color);
+      color: var(--light-shades-color);
       outline: none;
     }
     &[data-state="checked"] {
-      background-color: $DARKER_GRAY_COLOR;
-      color: $LIGHTER_GRAY_COLOR;
+      background-color: var(--dark-shades-color);
+      color: var(--light-shades-color);
       outline: none;
     }
   }

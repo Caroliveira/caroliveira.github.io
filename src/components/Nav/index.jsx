@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ThemeToggle } from "@linaoliveira/design-system";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
 import LanguageSelector from "../LanguageSelector";
-import ThemeToggle from "../ThemeToggle";
 import logo from "/logo.png";
 import styles from "./styles.module.scss";
 
