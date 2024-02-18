@@ -53,7 +53,12 @@ const Nav = () => {
         </ul>
       )}
       <LanguageSelector />
-      <ThemeToggle />
+      <div>
+        <ThemeToggle
+          enableDarkThemeLabel={t("nav.themeToggle.enableDarkTheme")}
+          enableLightThemeLabel={t("nav.themeToggle.enableLightTheme")}
+        />
+      </div>
       <button
         className={styles.nav__menu}
         onClick={handleLogoClick}
