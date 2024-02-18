@@ -22,6 +22,10 @@
       height: 300px;
     }
 
+    &:hover {
+      box-shadow: var(--box-shadow);
+    }
+
     &--expanded {
       @extend .achv__card;
       box-shadow: var(--box-shadow);

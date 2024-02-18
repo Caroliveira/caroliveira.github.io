@@ -28,7 +28,7 @@
   &__content {
     background-color: var(--light-shades-color);
     border-radius: 4px;
-    box-shadow: 0 2px 2px black;
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     width: 50px;
     z-index: 1;

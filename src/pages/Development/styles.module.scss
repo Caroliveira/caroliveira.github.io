@@ -90,9 +90,13 @@
 
     .development__title {
       color: var(--brand-color);
+      cursor: initial;
       font-size: 40px;
       @media (min-width: 1024px) {
         font-size: 48px;
+      }
+      &:hover {
+        color: var(--brand-color);
       }
     }
   }
@@ -100,16 +104,12 @@
   &__button {
     background-color: transparent;
     text-align: start;
-    &:hover {
-      box-shadow: none;
-    }
   }
 
   &__title {
     color: var(--secondary-text-color);
     cursor: pointer;
     font-size: 32px;
-
     @media (min-width: 1024px) {
       font-size: 40px;
     }
@@ -120,7 +120,7 @@
   }
 
   &__description {
-    max-width: 300px;
     color: var(--secondary-text-color);
+    max-width: 300px;
   }
 }

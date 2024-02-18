@@ -116,7 +116,9 @@
 
       a {
         color: var(--light-shades-color);
-        text-decoration: none;
+        &:hover {
+          color: var(--brand-accent-color);
+        }
       }
     }
   }
