@@ -17,6 +17,7 @@
     justify-content: center;
     overflow: hidden;
     width: 100%;
+    max-width: 750px;
     @media (min-width: 1024px) {
       height: 300px;
     }
