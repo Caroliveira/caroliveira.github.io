@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import illustration from "/src/assets/images/lina-illustration.png";
 import styles from "./styles.module.scss";
+import { Button } from "@linaoliveira/design-system";
 
 const Home = () => {
   const { t } = useTranslation("pages");
@@ -16,12 +17,16 @@ const Home = () => {
           Front end Developer
         </h1>
         <div className={styles.home__buttons}>
-          <button onClick={() => navigate("/developments")}>
+          <Button
+            size="large"
+            variant="outlined"
+            onClick={() => navigate("/developments")}
+          >
             {t("home.button.about")}
-          </button>
-          <button onClick={() => navigate("/contact")}>
+          </Button>
+          <Button size="large" onClick={() => navigate("/contact")}>
             {t("home.button.contact")}
-          </button>
+          </Button>
         </div>
       </div>
       <img
