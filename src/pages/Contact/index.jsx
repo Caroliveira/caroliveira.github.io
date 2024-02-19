@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import picture from "/src/assets/images/lina-picture.jpg";
 import styles from "./styles.module.scss";
-import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t, i18n } = useTranslation("pages");

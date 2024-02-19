@@ -25,6 +25,7 @@
         "menuLabel": "menu de navegação",
         "routes": {
             "home": "Introdução",
+            "about": "Sobre",
             "developments": "Desenvolvimentos",
             "contact": "Contato"
         },

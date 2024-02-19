@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@linaoliveira/design-system";
 
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Developments from "./pages/Development";
 import Contact from "./pages/Contact";
 
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/developments" element={<Developments />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

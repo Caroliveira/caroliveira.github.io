@@ -9,6 +9,7 @@ import styles from "./styles.module.scss";
 
 const ROUTES = [
   { nameKey: "home", path: "/" },
+  { nameKey: "about", path: "/about" },
   { nameKey: "developments", path: "/developments" },
   { nameKey: "contact", path: "/contact" },
 ];

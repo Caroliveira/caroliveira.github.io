@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Button } from "@linaoliveira/design-system";
 import illustration from "/src/assets/images/lina-illustration.png";
 import styles from "./styles.module.scss";
-import { Button } from "@linaoliveira/design-system";
 
 const Home = () => {
   const { t } = useTranslation("pages");
@@ -20,7 +20,7 @@ const Home = () => {
           <Button
             size="large"
             variant="outlined"
-            onClick={() => navigate("/developments")}
+            onClick={() => navigate("/about")}
           >
             {t("home.button.about")}
           </Button>

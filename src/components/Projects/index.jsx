@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from "react-i18next";
-import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
+import styles from "./styles.module.scss";
 
 const Projects = () => {
   const { t } = useTranslation();
