@@ -7,13 +7,7 @@ const LANGUAGES = ["en", "pt"];
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   return (
-    <Select.Root
-      value={i18n.language}
-      onValueChange={(vl) => {
-        console.log(vl);
-        i18n.changeLanguage(vl);
-      }}
-    >
+    <Select.Root value={i18n.language} onValueChange={i18n.changeLanguage}>
       <Select.Trigger className={styles.selector__trigger} aria-label="Food">
         <Select.Value>{i18n.language.toUpperCase()}</Select.Value>
         <Select.Icon className={styles.selector__icon} />
