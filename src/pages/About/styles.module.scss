@@ -1,4 +1,9 @@
 .about {
   text-align: start;
-  padding: 48px;
+  &__options {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 48px 0;
+  }
 }
