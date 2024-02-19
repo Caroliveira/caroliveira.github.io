@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import bizCapital from "../../assets/images/bizCapital.jpg";
 import andela from "../../assets/images/andela.jpg";
 import styles from "./styles.module.scss";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const achievements = [
   { nameKey: "bizCapital", img: bizCapital },
@@ -10,20 +10,25 @@ const achievements = [
 ];
 
 const Achievements = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { t } = useTranslation();
-  const [showDetails, setShowDetails] = useState("");
+
+  const query = new URLSearchParams(location.search);
+  const type = query.get("details");
 
   const renderAchvCard = ({ nameKey, img }) => {
-    const showCurrent = showDetails === nameKey;
+    const showCurrent = type === nameKey;
     const buttonAriaLabel = `${t(
       `achievements.${showCurrent ? "collapse" : "expand"}`
     )} ${t(`achievements.list.${nameKey}.title`)}`;
+    const details = showCurrent ? "" : `&details=${nameKey}`;
 
     return (
       <button
         key={nameKey}
         className={styles[`achv__card${showCurrent ? "--expanded" : ""}`]}
-        onClick={() => setShowDetails(showCurrent ? "" : nameKey)}
+        onClick={() => navigate(`?type=achievements${details}`)}
         aria-label={buttonAriaLabel}
         aria-expanded={showCurrent}
       >

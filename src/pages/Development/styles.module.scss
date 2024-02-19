@@ -57,7 +57,6 @@
 
 .development {
   border-radius: 0;
-  order: 1;
   position: relative;
 
   &::before {
@@ -77,10 +76,6 @@
 
   &--current {
     @extend .development;
-    order: 2;
-    @media (min-width: 1024px) {
-      order: 1;
-    }
     &::before {
       top: 24px;
       @media (min-width: 1024px) {

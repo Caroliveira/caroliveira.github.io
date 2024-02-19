@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Achievements from "../../components/Achievements";
 import Experiments from "../../components/Experiments";
@@ -12,16 +12,21 @@ const DEVELOPMENTS = [
 ];
 
 const Developments = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
-  const [current, setCurrent] = useState(0);
 
-  const renderListItem = ({ nameKey }, index) => {
-    const isCurrent = index === current;
+  const query = new URLSearchParams(location.search);
+  const type = query.get("type") || "projects";
+  const { content } = DEVELOPMENTS.find((d) => d.nameKey === type);
+
+  const renderListItem = ({ nameKey }) => {
+    const isCurrent = nameKey === type;
     const liClassName = `development${isCurrent ? "--current" : ""}`;
     return (
       <li key={nameKey} className={styles[liClassName]}>
         <button
-          onClick={() => setCurrent(index)}
+          onClick={() => navigate({ search: `?type=${nameKey}` })}
           className={styles.development__button}
           aria-expanded={isCurrent}
           aria-label={`${t("developments.display")} ${t(
@@ -48,9 +53,7 @@ const Developments = () => {
           {DEVELOPMENTS.map(renderListItem)}
         </ul>
       </div>
-      <div className={styles.developments__content}>
-        {DEVELOPMENTS[current].content}
-      </div>
+      <div className={styles.developments__content}>{content}</div>
     </div>
   );
 };
