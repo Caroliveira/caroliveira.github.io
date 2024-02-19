@@ -1,4 +1,16 @@
 {
+    "about": {
+        "who": "Quem é Lina?",
+        "description": "Estando na companhia dos meus colegas de quatro patas, sou alguém que encontra satisfação em transformar café em soluções eficazes de front-end. Atualmente aprofundando meus conhecimentos em testes e performance, busco qualidade em cada projeto, para ter uma ideia do meu trabalho, dê uma olhada na minha <a>página de desenvolvimentos</a>.",
+        "approach": "Abordagem",
+        "feats": "Proezas",
+        "goals": "Objetivos",
+        "options": {
+            "feats": "Ser promovida a desenvolvedora sênior em três anos não foi apenas um marco na minha carreira, foi a confirmação do meu comprometimento com a excelência, a evolução contínua e a paixão por deixar uma marca positiva em cada projeto que toco. Este reconhecimento reflete não apenas meu esforço individual, mas também o ambiente de suporte e inspiração que encontrei ao longo do caminho, motivando-me a superar desafios e elevar os padrões de qualidade em nosso campo.",
+            "goals": "Estou em uma jornada para me tornar uma especialista em ReactJs, além de continuar explorando novas tecnologias que enriqueçam cada projeto que toco. Mas, mais do que isso, meu objetivo é criar experiências digitais que se destacam tanto pela usabilidade quanto pelo impacto para os usuários finais. Adoro colaborar diretamente com times de produto e design, onde posso contribuir com minhas ideias e ver essas contribuições serem valorizadas.",
+            "approach": "Minha abordagem ao desenvolvimento não é só sobre entregar projetos, mas sobre criar soluções que tenham um impacto positivo, seja para usuários ou para a equipe com a qual colaboro. Valorizo o trabalho em equipe, a troca de conhecimentos e estou sempre pronta para enfrentar novos desafios com um espírito de colaboração e inovação. Acredito que um projeto só pode atingir seu potencial máximo quando todos os envolvidos têm voz ativa e trabalham em sintonia."
+        }
+    },
     "contact": {
         "pictureAlt": "Foto de Lina",
         "title": "Conecte comigo",

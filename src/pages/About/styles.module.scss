@@ -1,5 +1,9 @@
 .about {
-  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 780px;
   &__options {
     display: flex;
     gap: 24px;

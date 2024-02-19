@@ -1,4 +1,16 @@
 {
+    "about": {
+        "who": "Who is Lina?",
+        "description": "Being in the company of my four-legged colleagues, I am someone who finds satisfaction in turning coffee into effective front-end solutions. Currently deepening my knowledge in testing and performance, I aim for quality in every project. To get an idea of my work, take a look at my <a>developments page</a>.",
+        "approach": "Approach",
+        "feats": "Feats",
+        "goals": "Goals",
+        "options": {
+            "feats": "Being promoted to a senior developer in three years was not just a milestone in my career, it was a confirmation of my commitment to excellence, continuous evolution, and a passion for making a positive impact on every project I touch. This recognition reflects not just my individual effort, but also the supportive and inspiring environment I have encountered along the way, motivating me to overcome challenges and raise the standards of quality in our field.",
+            "goals": "I am on a journey to become a ReactJs specialist, while also continuing to explore new technologies that enrich every project I touch. But more than that, my goal is to create digital experiences that stand out for both their usability and impact on end-users. I love collaborating directly with product and design teams, where I can contribute my ideas and see those contributions valued.",
+            "approach": "My approach to development is not just about delivering projects, but about creating solutions that have a positive impact, whether for users or the team I collaborate with. I value teamwork, knowledge sharing, and am always ready to face new challenges with a spirit of collaboration and innovation. I believe that a project can only reach its full potential when everyone involved has an active voice and works in harmony."
+        }
+    },
     "contact": {
         "pictureAlt": "Picture of Lina",
         "title": "Connect with me",
