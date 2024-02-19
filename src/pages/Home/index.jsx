@@ -9,8 +9,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <div className={styles.home}>
+    <div className={styles.home}>
+      <div className={styles.home__wrapper}>
         <h1 className={styles.home__intro}>
           {t("home.title.hello")} <br />
           {t("home.title.intro")} <strong>Lina Oliveira</strong>, <br />
@@ -34,7 +34,7 @@ const Home = () => {
         src={illustration}
         className={styles.home__illustration}
       />
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,16 @@
 .home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   @media (min-width: 1024px) {
-    min-width: 500px;
+    flex-direction: row;
+    &__wrapper {
+      min-width: 500px;
+    }
   }
 
   &__intro {

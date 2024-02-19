@@ -2,4 +2,22 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  &__main {
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    padding: 24px;
+    @media (min-width: 1024px) {
+      padding: 48px;
+    }
+  }
+
+  &__footer {
+    color: var(--secondary-text-color);
+    padding: 16px;
+    text-align: center;
+  }
 }
