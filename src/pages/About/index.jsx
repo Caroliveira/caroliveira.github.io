@@ -1,6 +1,8 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { PaperPlaneIcon, StarIcon, TargetIcon } from "@radix-ui/react-icons";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@linaoliveira/design-system";
+
 import styles from "./styles.module.scss";
 
 const About = () => {
@@ -10,9 +12,18 @@ const About = () => {
   const query = new URLSearchParams(location.search);
   const option = query.get("option") || "feats";
   const aboutOptions = {
-    feats: <p>{t("about.options.feats")}</p>,
-    goals: <p>{t("about.options.goals")}</p>,
-    approach: <p>{t("about.options.approach")}</p>,
+    feats: {
+      icon: <StarIcon />,
+      content: <p>{t("about.options.feats")}</p>,
+    },
+    goals: {
+      icon: <TargetIcon />,
+      content: <p>{t("about.options.goals")}</p>,
+    },
+    approach: {
+      icon: <PaperPlaneIcon />,
+      content: <p>{t("about.options.approach")}</p>,
+    },
     // skills: null,
     // testimonials: null,
   };
@@ -35,11 +46,12 @@ const About = () => {
             disabled={key === option}
             onClick={() => navigate({ search: `?option=${key}` })}
           >
-            {t(`about.${key}`)}
+            {aboutOptions[key].icon}
+            <span>{t(`about.${key}`)}</span>
           </Button>
         ))}
       </div>
-      {aboutOptions[option]}
+      {aboutOptions[option].content}
     </div>
   );
 };

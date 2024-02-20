@@ -4,10 +4,41 @@
   justify-content: center;
   margin: 0 auto;
   max-width: 780px;
+
   &__options {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     justify-content: center;
     margin: 48px 0;
+    overflow: auto;
+    @media (min-width: 1024px) {
+      gap: 24px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      @media (min-width: 1024px) {
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      span {
+        display: none;
+        @media (min-width: 1024px) {
+          display: block;
+        }
+      }
+
+      &:disabled {
+        span {
+          display: block;
+        }
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
   }
 }
