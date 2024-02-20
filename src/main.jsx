@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@linaoliveira/design-system";
 
 import Home from "./pages/Home";
@@ -14,7 +14,7 @@ import "./i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <ThemeProvider>
         <Layout>
           <Routes>
@@ -25,6 +25,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           </Routes>
         </Layout>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -37,6 +37,7 @@
     "projects": {
         "underConstruction": "This area is still under some adjustments. My most impactful projects have all been for clients, so for now, it's a bit empty here...",
         "portfolioInvite": "But that doesn't mean there's nothing to see! While I'm creating something for this section, how about taking a look at <a>this portfolio code on GitHub</a>? That's where the magic starts.",
+        "dsInvite": "I'm also starting my very own design system, <a>go and check it out</a>!",
         "askFeedback": "And since you've made it this far, why not also take a peek at my Experiments or check out my Achievements? Furthermore, my <a>contact page</a> is always open for you. It would be great to hear what you think!"
     }
 }
