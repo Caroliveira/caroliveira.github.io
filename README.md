@@ -13,11 +13,11 @@ Here are the basic steps to get it up and running:
 1. **Prerequisites**: Make sure [Node.js](https://nodejs.org/) is installed on your machine for a smooth setup.
 2. **Clone the repository**:
    ```bash
-    git clone https://github.com/Caroliveira/caroliveira.github.io.git
+    git clone https://github.com/Caroliveira/portfolio.git
    ```
 3. **Navigate to the project directory**:
    ```bash
-   cd caroliveira.github.io
+   cd portfolio
    ```
 4. **Install dependencies**:
    ```bash
@@ -27,7 +27,7 @@ Here are the basic steps to get it up and running:
    ```bash
    npm run dev
    ```
-   Access the portfolio at http://localhost:5173 or forget all that, just [click here](https://caroliveira.github.io/) and explore!
+   Access the portfolio at http://localhost:5173 or forget all that, just [click here](https://www.lina-oliveira.com/) and explore!
 
 ## Features
 
