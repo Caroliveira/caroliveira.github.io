@@ -39,6 +39,7 @@
 
   &__menu {
     background-color: var(--dark-accent-color);
+    cursor: pointer;
     height: 20px;
     width: 20px;
     @media (min-width: 1024px) {
