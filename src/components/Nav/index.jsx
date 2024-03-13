@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { Switch, useTheme } from "@linaoliveira/design-system";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
 import LanguageSelector from "../LanguageSelector";
-import moon from "../../assets/images/moon.svg";
-import sun from "../../assets/images/sun.svg";
+import moon from "/moon.svg";
+import sun from "/sun.svg";
 import logo from "/logo.png";
 import styles from "./styles.module.scss";
 
