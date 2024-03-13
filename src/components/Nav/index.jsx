@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ThemeToggle } from "@linaoliveira/design-system";
+import { Switch, useTheme } from "@linaoliveira/design-system";
 import useHandleOutsideClick from "../../hooks/useHandleOutsideClick";
 import LanguageSelector from "../LanguageSelector";
+import moon from "../../assets/images/moon.svg";
+import sun from "../../assets/images/sun.svg";
 import logo from "/logo.png";
 import styles from "./styles.module.scss";
 
@@ -18,7 +20,10 @@ const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation("components");
+  const { theme, setTheme } = useTheme();
 
+  const isDarkMode = theme === "dark";
+  const newTheme = isDarkMode ? "Light" : "Dark";
   const isCollapsibleNav = window.innerWidth < 1024;
   const [openNav, setOpenNav] = useState(!isCollapsibleNav);
   const navRef = useRef();
@@ -55,9 +60,12 @@ const Nav = () => {
       )}
       <LanguageSelector />
       <div>
-        <ThemeToggle
-          enableDarkThemeLabel={t("nav.themeToggle.enableDarkTheme")}
-          enableLightThemeLabel={t("nav.themeToggle.enableLightTheme")}
+        <Switch
+          onIcon={sun}
+          offIcon={moon}
+          checked={isDarkMode}
+          onChange={() => setTheme(newTheme.toLowerCase())}
+          aria-label={t(`nav.themeToggle.enable${newTheme}Theme`)}
         />
       </div>
       <button
