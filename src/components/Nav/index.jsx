@@ -51,7 +51,7 @@ const Nav = () => {
   return (
     <nav className={styles.nav} ref={navRef}>
       <Link to="/" className={styles.nav__logo}>
-        <img alt="Lina Logo" src={logo} />
+        <img alt="Lina Logo" src={logo} width={32} height={32} />
       </Link>
       {openNav && (
         <ul id="navigation" className={styles.nav__list}>

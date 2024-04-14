@@ -38,7 +38,7 @@ Here are the basic steps to get it up and running:
 
 - **Framework**: The project is built using Vite and ReactJS.
 - **Styling**: Styled with SASS following its best practices and guidelines.
-- **Deployment**: Automated deployment through GitHub Actions, ensuring that the latest version of my portfolio is always available.
+- **Deployment**: Automated deployment through AWS Amplify, ensuring that the latest version of my portfolio is always available.
 
 ## License
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@linaoliveira/design-system";
-import illustration from "/src/assets/images/lina-illustration.png";
+import illustration from "/lina-illustration.webp";
 import styles from "./styles.module.scss";
 
 const Home = () => {
