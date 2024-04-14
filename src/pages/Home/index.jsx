@@ -20,11 +20,11 @@ const Home = () => {
           <Button
             size="large"
             variant="outlined"
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/about/")}
           >
             {t("home.button.about")}
           </Button>
-          <Button size="large" onClick={() => navigate("/contact")}>
+          <Button size="large" onClick={() => navigate("/contact/")}>
             {t("home.button.contact")}
           </Button>
         </div>

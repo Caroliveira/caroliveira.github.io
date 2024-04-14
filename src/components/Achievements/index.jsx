@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import bizCapital from "../../assets/images/bizCapital.jpg";
-import andela from "../../assets/images/andela.jpg";
+import bizCapital from "../../assets/images/bizCapital.webp";
+import andela from "../../assets/images/andela.webp";
 import styles from "./styles.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import picture from "/src/assets/images/lina-picture.jpg";
+import picture from "/src/assets/images/lina-picture.webp";
 import styles from "./styles.module.scss";
 
 const Contact = () => {
